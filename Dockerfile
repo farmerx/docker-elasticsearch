@@ -21,6 +21,7 @@ COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 RUN wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-5.3.0.tar.gz
 RUN tar -zxf elasticsearch-5.3.0.tar.gz
 RUN mv elasticsearch-5.3.0 /opt/elasticsearch-5.3.0
+RUN groupadd es
 
 CMD ["/usr/bin/supervisord"]
 
